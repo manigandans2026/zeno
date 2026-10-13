@@ -4,14 +4,13 @@ export default function VoicePlayer({ title = "Voice Note: My favorite Sunday pl
   const [isPlaying, setIsPlaying] = useState(false);
   const [progress, setProgress] = useState(0);
   const audioCtxRef = useRef(null);
-  const oscRef = useRef(null);
 
   const togglePlay = () => {
     if (isPlaying) {
       setIsPlaying(false);
     } else {
       setIsPlaying(true);
-      // Play a soft synthesized ambient tune preview using Web Audio API so it works without external assets
+      
       try {
         if (!audioCtxRef.current) {
           audioCtxRef.current = new (window.AudioContext || window.webkitAudioContext)();
@@ -21,9 +20,8 @@ export default function VoicePlayer({ title = "Voice Note: My favorite Sunday pl
           ctx.resume();
         }
         
-        // Simple synth chime
         const now = ctx.currentTime;
-        const notes = [261.63, 329.63, 392.00, 523.25]; // C E G C
+        const notes = [261.63, 329.63, 392.00, 523.25]; 
         notes.forEach((freq, idx) => {
           const osc = ctx.createOscillator();
           const gain = ctx.createGain();
@@ -79,7 +77,6 @@ export default function VoicePlayer({ title = "Voice Note: My favorite Sunday pl
           <span className="text-[10px] text-cyan-700 font-mono pl-1">{duration}</span>
         </div>
 
-        {/* Dynamic Equalizer Bar */}
         <div className="flex items-center gap-1 mt-1">
           {[40, 75, 50, 90, 65, 30, 80, 100, 45, 60, 85, 30, 70, 50].map((h, i) => (
             <div

@@ -9,10 +9,8 @@ export default function HeroSection({ onOpenWaitlist, onExplore }) {
     <div className="relative pt-space-lg lg:pt-12 max-w-7xl mx-auto px-4 sm:px-8" id="home">
       <div className="lg:grid lg:grid-cols-12 lg:gap-12 lg:items-center">
         
-        {/* Left Column: Headline, Copy, Actions */}
         <div className="lg:col-span-6 flex flex-col items-center lg:items-start text-center lg:text-left">
           
-          {/* Top Pill Badge */}
           <div className="inline-flex items-center gap-space-xs px-space-md py-1.5 rounded-full bg-white/90 border border-pink-200 shadow-sm backdrop-blur-xl animate-fade-in">
             <span className="material-symbols-outlined text-[16px] text-pink-500" style={{ fontVariationSettings: "'FILL' 1" }}>
               auto_awesome
@@ -22,7 +20,6 @@ export default function HeroSection({ onOpenWaitlist, onExplore }) {
             </span>
           </div>
 
-          {/* Hero Headline */}
           <h1 className="mt-space-md text-3xl sm:text-4xl lg:text-5xl lg:leading-tight text-slate-900 tracking-tight font-extrabold max-w-xl">
             Find people who actually want to{' '}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-rose-500 to-cyan-500">
@@ -31,12 +28,10 @@ export default function HeroSection({ onOpenWaitlist, onExplore }) {
             and stay.
           </h1>
 
-          {/* Supporting Body Copy */}
           <p className="mt-space-sm text-base sm:text-lg text-slate-800 font-medium max-w-lg leading-relaxed">
             More than just matches — discover meaningful conversations and emotional chemistry powered by emotional resonance.
           </p>
 
-          {/* CTA Action Buttons */}
           <div className="mt-space-lg w-full sm:w-auto flex flex-col sm:flex-row gap-space-sm items-center justify-center lg:justify-start">
             <button
               onClick={onOpenWaitlist}
@@ -59,7 +54,6 @@ export default function HeroSection({ onOpenWaitlist, onExplore }) {
             </a>
           </div>
 
-          {/* Quick Metrics Bar */}
           <div className="mt-8 pt-6 border-t border-slate-200/80 w-full flex items-center justify-center lg:justify-start gap-8 text-slate-700 text-xs sm:text-sm">
             <div>
               <div className="font-extrabold text-slate-900 text-base sm:text-lg">98.4%</div>
@@ -79,11 +73,9 @@ export default function HeroSection({ onOpenWaitlist, onExplore }) {
 
         </div>
 
-        {/* Right Column: Hero Visual Connected Match UI Mockup */}
         <div className="lg:col-span-6 mt-12 lg:mt-0 w-full relative">
           <div className="flex flex-col gap-space-md relative z-10 max-w-md mx-auto lg:max-w-none">
             
-            {/* Card 1: Ananya */}
             <div className="w-full rounded-2xl bg-white border border-pink-100/90 shadow-[0_8px_30px_rgba(244,63,94,0.08)] p-5 flex flex-col text-left relative overflow-hidden transition-transform hover:-translate-y-0.5">
               <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-pink-500 via-rose-400 to-cyan-400 opacity-90"></div>
               
@@ -108,12 +100,10 @@ export default function HeroSection({ onOpenWaitlist, onExplore }) {
                     UX Designer • Chennai, TN
                   </span>
                   
-                  {/* Voice Note Player */}
                   <VoicePlayer title="Voice Note: “My favorite Sunday playlist”" duration="0:42" />
                 </div>
               </div>
 
-              {/* Tags */}
               <div className="flex flex-wrap gap-1.5 mt-3 pt-2 border-t border-slate-100">
                 <span className="text-xs px-2.5 py-1 rounded-full bg-slate-50 border border-cyan-200 text-cyan-800 font-medium">
                   Indie Cinema
@@ -127,7 +117,6 @@ export default function HeroSection({ onOpenWaitlist, onExplore }) {
               </div>
             </div>
 
-            {/* Luminous Connection Node Overlay (Interactive Spark Resonance) */}
             <div className="relative my-[-10px] self-center z-20 flex flex-col items-center group cursor-pointer"
                  onMouseEnter={() => setIsResonanceHovered(true)}
                  onMouseLeave={() => setIsResonanceHovered(false)}>
@@ -145,7 +134,6 @@ export default function HeroSection({ onOpenWaitlist, onExplore }) {
                 </span>
               </div>
 
-              {/* Interactive Resonance Adjuster popover */}
               {isResonanceHovered && (
                 <div className="absolute top-12 bg-white border border-pink-200 p-3 rounded-xl shadow-xl z-30 w-64 text-left animate-fade-in">
                   <div className="flex justify-between items-center mb-1.5 text-xs text-slate-700 font-semibold">
@@ -166,7 +154,6 @@ export default function HeroSection({ onOpenWaitlist, onExplore }) {
               <div className="h-6 w-0.5 bg-gradient-to-b from-cyan-400 to-pink-500 shadow-sm"></div>
             </div>
 
-            {/* Card 2: Aditya */}
             <div className="w-full rounded-2xl bg-white border border-cyan-100/90 shadow-[0_8px_30px_rgba(6,182,212,0.08)] p-5 flex flex-col text-left relative overflow-hidden transition-transform hover:-translate-y-0.5">
               <div className="absolute inset-x-0 bottom-0 h-1 bg-gradient-to-r from-cyan-400 via-blue-500 to-pink-500 opacity-90"></div>
               
@@ -198,7 +185,6 @@ export default function HeroSection({ onOpenWaitlist, onExplore }) {
                 </div>
               </div>
 
-              {/* Tags */}
               <div className="flex flex-wrap gap-1.5 mt-3 pt-2 border-t border-slate-100">
                 <span className="text-xs px-2.5 py-1 rounded-full bg-pink-50 border border-pink-200 text-pink-700 font-medium">
                   Carnatic Fusion

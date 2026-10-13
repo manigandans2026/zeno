@@ -86,7 +86,7 @@ export default function SparksTab({ onOpenWaitlist }) {
         spread: 60,
         origin: { y: 0.7 }
       });
-    } catch (e) {}
+    } catch {}
   };
 
   const handleNext = () => {
@@ -99,7 +99,7 @@ export default function SparksTab({ onOpenWaitlist }) {
 
   return (
     <div className="pt-space-lg pb-space-xl max-w-7xl mx-auto px-4 sm:px-8 flex flex-col">
-      {/* Header */}
+      
       <div className="text-left mb-6">
         <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-rose-50 border border-rose-200 text-rose-700 font-semibold text-xs mb-2">
           <span className="material-symbols-outlined text-[16px] text-rose-500">local_fire_department</span>
@@ -113,15 +113,12 @@ export default function SparksTab({ onOpenWaitlist }) {
         </p>
       </div>
 
-      {/* Desktop Split View Grid */}
       <div className="lg:grid lg:grid-cols-12 lg:gap-8 lg:items-start">
         
-        {/* Left Column (5 cols): Main Swiper Card */}
         <div className="lg:col-span-5 bg-white rounded-2xl border border-pink-100 shadow-xl overflow-hidden relative flex flex-col">
-          {/* Top Banner Gradient */}
+          
           <div className="h-2 bg-gradient-to-r from-pink-500 via-rose-400 to-cyan-400"></div>
 
-          {/* Hero Photo & Badge */}
           <div className="relative w-full h-80 sm:h-96 bg-slate-900 overflow-hidden">
             <img
               src={currentProfile.img}
@@ -134,7 +131,6 @@ export default function SparksTab({ onOpenWaitlist }) {
             />
             <div className="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/30 to-transparent"></div>
 
-            {/* Top Floating Resonance Badge */}
             <div className="absolute top-4 left-4 px-3.5 py-1.5 rounded-full bg-white/95 border border-pink-300 shadow-md backdrop-blur-md flex items-center gap-1.5">
               <span className="material-symbols-outlined text-[16px] text-pink-500 animate-pulse" style={{ fontVariationSettings: "'FILL' 1" }}>
                 favorite
@@ -144,7 +140,6 @@ export default function SparksTab({ onOpenWaitlist }) {
               </span>
             </div>
 
-            {/* Bottom Floating Info */}
             <div className="absolute bottom-4 left-4 right-4 text-white">
               <div className="flex items-baseline justify-between">
                 <h2 className="text-2xl font-bold tracking-tight">
@@ -160,12 +155,10 @@ export default function SparksTab({ onOpenWaitlist }) {
             </div>
           </div>
 
-          {/* Card Content Body */}
           <div className="p-5 flex flex-col gap-3 text-left">
-            {/* Voice Player */}
+            
             <VoicePlayer title={currentProfile.voiceTitle} duration={currentProfile.voiceDuration} />
 
-            {/* Action Buttons */}
             <div className="flex items-center gap-3 pt-2">
               <button
                 onClick={handlePrev}
@@ -202,10 +195,8 @@ export default function SparksTab({ onOpenWaitlist }) {
           </div>
         </div>
 
-        {/* Right Column (7 cols): Detailed Profile Breakdown */}
         <div className="lg:col-span-7 mt-6 lg:mt-0 flex flex-col gap-6 text-left">
           
-          {/* Bio & Prompt Breakdown */}
           <div className="bg-white rounded-2xl border border-slate-200 p-6 shadow-sm flex flex-col gap-4">
             <div>
               <span className="text-xs font-bold uppercase tracking-wider text-pink-600">Personal Philosophy</span>
@@ -233,7 +224,6 @@ export default function SparksTab({ onOpenWaitlist }) {
             </div>
           </div>
 
-          {/* Neural Compatibility Matrix Card */}
           <div className="bg-white rounded-2xl border border-slate-200 p-6 shadow-sm">
             <h3 className="text-sm font-bold uppercase tracking-wider text-slate-900 mb-4 flex items-center gap-2">
               <span className="material-symbols-outlined text-pink-500 text-[20px]">psychology</span>
@@ -259,7 +249,6 @@ export default function SparksTab({ onOpenWaitlist }) {
             </div>
           </div>
 
-          {/* Quick Browse Bar */}
           <div className="p-4 rounded-xl bg-gradient-to-r from-cyan-50 to-pink-50 border border-pink-200 flex items-center justify-between">
             <div className="flex items-center gap-3">
               <span className="material-symbols-outlined text-pink-500 text-[24px]">stars</span>

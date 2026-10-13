@@ -31,7 +31,7 @@ export default function AiMatchTab({ onOpenWaitlist }) {
 
   return (
     <div className="pt-space-lg pb-space-xl max-w-7xl mx-auto px-4 sm:px-8 flex flex-col">
-      {/* Header */}
+      
       <div className="text-left mb-6">
         <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-cyan-50 border border-cyan-200 text-cyan-800 font-semibold text-xs mb-2">
           <span className="material-symbols-outlined text-[16px] text-cyan-600">psychology</span>
@@ -45,10 +45,8 @@ export default function AiMatchTab({ onOpenWaitlist }) {
         </p>
       </div>
 
-      {/* Interactive Controls Row (2 Columns on desktop) */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8 text-left">
         
-        {/* Mood Frequency Tuner */}
         <div className="bg-white rounded-2xl border border-cyan-100 p-6 shadow-sm flex flex-col justify-between">
           <div>
             <div className="flex items-center justify-between mb-3">
@@ -88,7 +86,6 @@ export default function AiMatchTab({ onOpenWaitlist }) {
           </div>
         </div>
 
-        {/* Interactive Icebreaker Lab */}
         <div className="bg-white rounded-2xl border border-pink-100 p-6 shadow-sm flex flex-col justify-between">
           <div>
             <h3 className="font-bold text-slate-900 text-base mb-1 flex items-center gap-1.5">
@@ -104,7 +101,7 @@ export default function AiMatchTab({ onOpenWaitlist }) {
                 type="text"
                 value={partnerInterest}
                 onChange={(e) => setPartnerInterest(e.target.value)}
-                placeholder="e.g. Vintage synth, Ceramics..."
+                placeholder="Enter an interest (e.g. Vintage synth, Ceramics)..."
                 className="flex-1 px-4 py-2.5 text-xs sm:text-sm rounded-xl border border-slate-200 outline-none focus:border-pink-500"
               />
               <button
@@ -129,8 +126,19 @@ export default function AiMatchTab({ onOpenWaitlist }) {
 
       </div>
 
-      {/* Standard AI Experience section */}
       <AiExperienceSection />
+
+      {onOpenWaitlist && (
+        <div className="mt-8 text-center flex justify-center">
+          <button
+            onClick={onOpenWaitlist}
+            className="h-11 px-6 rounded-full bg-gradient-to-r from-pink-500 to-cyan-500 text-white text-xs sm:text-sm font-semibold shadow-md hover:shadow-lg transition-all cursor-pointer flex items-center gap-2"
+          >
+            <span>Experience AI Match in Live Deck</span>
+            <span className="material-symbols-outlined text-[16px]">arrow_forward</span>
+          </button>
+        </div>
+      )}
     </div>
   );
 }

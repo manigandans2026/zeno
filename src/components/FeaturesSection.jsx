@@ -74,7 +74,6 @@ export default function FeaturesSection() {
   return (
     <div className="mt-space-xl pt-12 max-w-7xl mx-auto px-4 sm:px-8 text-left" id="features">
       
-      {/* Header */}
       <div className="flex flex-col items-start">
         <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-pink-50 border border-pink-200 text-pink-700">
           <span className="material-symbols-outlined text-[14px] text-pink-500">grid_view</span>
@@ -90,7 +89,6 @@ export default function FeaturesSection() {
           Discover the suite of intelligent tools designed to replace superficial swiping with genuine chemistry.
         </p>
 
-        {/* Category Pill Filters */}
         <div className="mt-6 flex flex-wrap gap-2">
           {categories.map((cat) => (
             <button
@@ -108,7 +106,6 @@ export default function FeaturesSection() {
         </div>
       </div>
 
-      {/* Feature Cards Grid */}
       <div className="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {filteredFeatures.map((item) => (
           <div

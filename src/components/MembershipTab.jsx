@@ -13,7 +13,7 @@ export default function MembershipTab({ onOpenWaitlist }) {
 
   return (
     <div className="pt-space-lg pb-space-xl max-w-7xl mx-auto px-4 sm:px-8 flex flex-col">
-      {/* Header */}
+      
       <div className="text-left mb-6">
         <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-pink-50 border border-pink-200 text-pink-700 font-semibold text-xs mb-2">
           <span className="material-symbols-outlined text-[16px] text-pink-500">verified</span>
@@ -27,10 +27,8 @@ export default function MembershipTab({ onOpenWaitlist }) {
         </p>
       </div>
 
-      {/* Main Card */}
       <VelvetMembershipSection onOpenWaitlist={onOpenWaitlist} />
 
-      {/* Feature Comparison Table */}
       <div className="mt-space-xl bg-white rounded-2xl border border-slate-200 p-6 sm:p-8 shadow-sm text-left">
         <h3 className="font-bold text-slate-900 text-base sm:text-lg mb-4">
           Plan Comparison Matrix

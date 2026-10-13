@@ -41,7 +41,6 @@ export default function AiExperienceSection() {
 
       <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
         
-        {/* AI Card 1: Conversation Assistant */}
         <div className="rounded-2xl bg-white border border-slate-200 p-6 shadow-sm relative overflow-hidden flex flex-col justify-between hover:border-pink-300 transition-colors">
           <div>
             <div className="flex items-center justify-between mb-4">
@@ -58,7 +57,6 @@ export default function AiExperienceSection() {
               Personalized icebreakers derived from specific niche interests, eliminating awkward silence.
             </p>
 
-            {/* Interactive Topic Pill Selection */}
             <div className="mt-4 flex flex-wrap gap-1.5">
               {topics.map((t) => (
                 <button
@@ -76,7 +74,6 @@ export default function AiExperienceSection() {
             </div>
           </div>
 
-          {/* Mock dialogue bubble */}
           <div className="mt-6 p-4 rounded-xl bg-slate-50 border border-pink-100 flex flex-col gap-1 text-left min-h-[85px] justify-center">
             <div className="flex items-center justify-between">
               <span className="font-label-sm text-label-sm text-cyan-700 font-semibold flex items-center gap-1">
@@ -94,7 +91,6 @@ export default function AiExperienceSection() {
           </div>
         </div>
 
-        {/* AI Card 2: Compatibility Insights */}
         <div className="rounded-2xl bg-white border border-slate-200 p-6 shadow-sm relative overflow-hidden flex flex-col justify-between hover:border-cyan-300 transition-colors">
           <div>
             <div className="flex items-center justify-between mb-4">
@@ -124,7 +120,6 @@ export default function AiExperienceSection() {
           </div>
         </div>
 
-        {/* AI Card 3: Date Suggestions */}
         <div className="rounded-2xl bg-white border border-slate-200 p-6 shadow-sm relative overflow-hidden flex flex-col justify-between hover:border-pink-300 transition-colors">
           <div>
             <div className="flex items-center justify-between mb-4">

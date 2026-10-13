@@ -1,4 +1,4 @@
-/* Custom global styles for Zuno App */
+
 body {
   margin: 0;
   padding: 0;
@@ -6,7 +6,6 @@ body {
   background-color: #F8FAFC;
 }
 
-/* Custom wave animation for voice player */
 @keyframes wave {
   0%, 100% { height: 6px; }
   50% { height: 20px; }
@@ -18,7 +17,6 @@ body {
 .animate-wave-4 { animation: wave 1.2s ease-in-out infinite 0.1s; }
 .animate-wave-5 { animation: wave 1.2s ease-in-out infinite 0.3s; }
 
-/* Subtle fade in keyframes */
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(4px); }
   to { opacity: 1; transform: translateY(0); }
@@ -26,4 +24,13 @@ body {
 
 .animate-fade-in {
   animation: fadeIn 0.3s ease-out forwards;
+}
+
+@keyframes slideInLeft {
+  from { transform: translateX(-100%); }
+  to { transform: translateX(0); }
+}
+
+.animate-slide-in-left {
+  animation: slideInLeft 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
