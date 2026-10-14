@@ -15,6 +15,16 @@ app.use(cors({
 }));
 app.use(express.json({ limit: '1mb' }));
 
+// Root endpoint
+app.get('/', (req, res) => {
+  res.json({
+    status: 'online',
+    service: 'Zuno Core API',
+    message: 'Backend is running. Visit /api/health for full diagnostics.',
+    healthCheck: '/api/health'
+  });
+});
+
 // Health Check
 app.get('/api/health', (req, res) => {
   res.json({
