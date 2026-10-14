@@ -168,7 +168,7 @@ export default function App() {
         setActiveTab={setActiveTab}
       />
 
-      <main className="flex flex-col relative w-full pt-16 pb-24 md:pb-12 bg-[#F8FAFC] min-h-screen">
+      <main className={`flex flex-col relative w-full pt-16 ${isAuthenticated ? 'pb-24 md:pb-12' : 'pb-12'} bg-[#F8FAFC] min-h-screen`}>
         <div className="flex flex-col w-full overflow-hidden">
           
           <div className="relative w-full pb-space-xl">
@@ -275,7 +275,7 @@ export default function App() {
         </div>
       </main>
 
-      <BottomNav activeTab={activeTab} setActiveTab={setActiveTab} />
+      {isAuthenticated && <BottomNav activeTab={activeTab} setActiveTab={setActiveTab} />}
 
       <WaitlistModal 
         isOpen={isWaitlistOpen}
