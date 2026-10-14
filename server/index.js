@@ -129,7 +129,7 @@ app.post('/api/ai', async (req, res) => {
       })
     });
 
-    if (!response.ok && (response.status === 402 || response.status === 404)) {
+    if (!response.ok && (response.status === 402 || response.status === 404 || response.status === 429)) {
       console.warn(`Primary model ${model} returned ${response.status}. Retrying with resilient fallback...`);
       response = await fetch('https://openrouter.ai/api/v1/chat/completions', {
         method: 'POST',

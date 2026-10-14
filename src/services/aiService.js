@@ -2,7 +2,7 @@
  * Client-side AI service that connects to the Zuno backend OpenRouter service
  */
 
-const API_BASE = import.meta.env.VITE_API_URL || '';
+const API_BASE = (import.meta.env.VITE_API_URL || 'https://zuno-backend1.onrender.com').replace(/\/+$/, '');
 
 export async function askAiAssistant({ prompt, mode = 'dating', userContext = {} }) {
   if (!prompt || !prompt.trim()) {
